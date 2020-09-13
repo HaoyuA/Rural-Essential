@@ -2,7 +2,7 @@
 
 这个 app 主要用意是为了通过教育年轻司机的方式去减少交通事故和伤亡 功能主要分为以下几块：
 
-<img src="Rural_Essential/app/src/main/ic_launcher-playstore.png" alt="ic_launcher-playstore" style="zoom:50%;" />
+<img src="Rural_Essential/app/src/main/ic_launcher-playstore.png" alt="ic_launcher-playstore" style="zoom:50%; margin: auto" />
 
 ### 首页
 
