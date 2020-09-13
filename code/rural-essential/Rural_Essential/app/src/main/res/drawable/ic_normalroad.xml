@@ -1,0 +1,38 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="200dp"
+    android:viewportWidth="300"
+    android:viewportHeight="200">
+    <path
+        android:fillColor="#000"
+        android:name="矩形 1"
+        android:pathData="m66.68 0h167.65l64.98 200h-300.35l67.71 -200z" />
+    <path
+        android:name="矩形 1"
+        android:pathData="m204.06 41.67 37.91 116.67h-184.9l39.5 -116.67zm-137.38 -41.67 -67.71 200h300.35l-64.98 -200z"
+        android:fillColor="#000" />
+    <path
+        android:fillColor="#fff"
+        android:name="矩形 2"
+        android:pathData="m147.71 0h5.59l0.85 200h-10.01l3.57 -200z" />
+    <path
+        android:name="矩形 2"
+        android:pathData="m147.71 0 -3.57 200h10.01l-0.85 -200z"
+        android:fillColor="#fff" />
+    <path
+        android:fillColor="#fff"
+        android:name="矩形 2 拷贝 2"
+        android:pathData="m228.75 0h5.59l64.98 200h-10.01l-60.56 -200z" />
+    <path
+        android:name="矩形 2 拷贝 2"
+        android:pathData="m228.75 0 60.56 200h10.01l-64.98 -200z"
+        android:fillColor="#ddd" />
+    <path
+        android:fillColor="#ddd"
+        android:name="矩形 2 拷贝"
+        android:pathData="m66.68 0h5.59l-63.29 200h-10.01l67.71 -200z" />
+    <path
+        android:name="矩形 2 拷贝"
+        android:pathData="m66.68 0 -67.71 200h10.01l63.29 -200z"
+        android:fillColor="#ddd" />
+</vector>

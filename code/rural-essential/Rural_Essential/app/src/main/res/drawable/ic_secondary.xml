@@ -1,0 +1,22 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="200dp"
+    android:viewportWidth="300"
+    android:viewportHeight="200">
+    <path
+        android:fillColor="#000"
+        android:name="矩形 1"
+        android:pathData="m73 0h154.48l72.52 200h-299.52l72.52 -200z" />
+    <path
+        android:fillColor="#ddd"
+        android:name="矩形 2 拷贝 2"
+        android:pathData="m225.42 0h2.06l72.52 200h-3.99l-70.59 -200z" />
+    <path
+        android:fillColor="#ddd"
+        android:name="矩形 2 拷贝 3"
+        android:pathData="m73 0h2.06l-70.59 200h-3.99l72.52 -200z" />
+    <path
+        android:fillColor="#ddd"
+        android:name="矩形 2 拷贝 4"
+        android:pathData="m150.24 0h2.06l1.93 200h-3.99v-200z" />
+</vector>

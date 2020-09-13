@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name" translatable="false">Rural Essential</string>
+    <string name="title_home" translatable="false">Training</string>
+    <string name="title_summary" translatable="false">Summary</string>
+    <string name="title_quiz" translatable="false">Quiz</string>
+    <string name="title_news" translatable="false">News</string>
+    <string name="title_help" translatable="false">Help</string>
+    <string name="title_map" translatable="false">Map</string>
+    <string name="description_weather_image" translatable="false">Weather</string>
+    <string name="start_button" translatable="false">Start</string>
+    <string name="destination_hint" translatable="false">Input a destination</string>
+    <string name="warning_info" translatable="false">Warning:\nPlease follow traffic rules all time</string>
+    <string name="warning_background_image">background image</string>
+    <string name="question">  "  Question:"</string>
+    <string name="choose_an_answer"> "  Choose an answer:"</string>
+    <string name="stop_button">Stop</string>
+    <string name="submit_button">Submit</string>
+    <string name="submit_feedback">Submit</string>
+    <string name="please_enter_a_nick_name">Please enter a nick name</string>
+    <string name="please_input_your_feedback_in_here">Please input your feedback in here</string>
+</resources>

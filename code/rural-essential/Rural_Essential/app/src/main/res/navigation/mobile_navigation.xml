@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home"
+    >
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.rural_essential.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_summary"
+        android:name="com.example.rural_essential.ui.summary.SummaryFragment"
+        android:label="@string/title_summary"
+        tools:layout="@layout/fragment_summary" />
+
+    <fragment
+        android:id="@+id/navigation_quiz"
+        android:name="com.example.rural_essential.ui.quiz.QuizFragment"
+        android:label="@string/title_quiz"
+        tools:layout="@layout/fragment_quiz" />
+    <fragment
+        android:id="@+id/navigation_news"
+        android:name="com.example.rural_essential.ui.news.NewsFragment"
+        android:label="@string/title_news"
+        tools:layout="@layout/fragment_news" />
+    <fragment
+        android:id="@+id/navigation_help"
+        android:name="com.example.rural_essential.ui.help.HelpFragment"
+        android:label="@string/title_help"
+        tools:layout="@layout/fragment_help" />
+
+</navigation>

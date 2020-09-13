@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:isScrollContainer="true"
+    tools:context=".ui.quiz.QuizFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/start_title_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:elevation="2dp"
+        android:visibility="visible"
+        app:cardCornerRadius="10dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorLightBlue2">
+
+            <TextView
+                android:id="@+id/start_quiz_text"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Welcome\nYou can start quiz by click on 'Start'"
+                android:textColor="@android:color/black"
+                android:textSize="10pt"
+                app:layout_constraintBottom_toTopOf="@+id/start_quiz_button"
+                app:layout_constraintLeft_toLeftOf="parent"
+
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/start_quiz_button"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="20dp"
+                android:background="@drawable/button_press_effect_2"
+                android:text="Start"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/start_quiz_text" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:id="@+id/quiz_card"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="1"
+            android:rowCount="1">
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:elevation="2dp"
+                android:translationZ="5dp"
+                app:cardCornerRadius="10dp">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/colorLightBlue"
+                    android:columnCount="1"
+                    android:rowCount="10">
+
+                    <TextView
+                        android:id="@+id/num_of_questions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="10pt" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:background="@color/colorDarkLightBlue"
+                        android:text="  Question:"
+                        android:textStyle="bold"
+                        android:textSize="10pt"
+                        android:textColor="@android:color/black"
+                        />
+                    <TextView
+                        android:id="@+id/question_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_row="2"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="8pt" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_row="3"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/colorDarkLightBlue"
+                        android:text="@string/choose_an_answer"
+                        android:textColor="@android:color/black"
+                        android:textSize="10pt"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/answer_a"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:background="@drawable/button_press_effect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_row="4"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/black"
+                        android:textSize="8pt" />
+
+                    <Button
+                        android:id="@+id/answer_b"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:background="@drawable/button_press_effect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_row="5"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/black"
+                        android:textSize="8pt" />
+
+                    <Button
+                        android:id="@+id/answer_c"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:background="@drawable/button_press_effect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_row="6"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/black"
+                        android:textSize="8pt" />
+
+                    <LinearLayout
+                        android:id="@+id/feedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_row="7"
+                        android:gravity="left"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/animation_view"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            app:lottie_autoPlay="true"
+                            app:lottie_enableMergePathsForKitKatAndAbove="true"
+                            app:lottie_loop="false" />
+
+
+                        <TextView
+                            android:id="@+id/correct_or_wrong"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+
+                            android:textColor="@android:color/black"
+                            android:textSize="8pt" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/correct_answer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_row="8"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="8pt"
+                        android:visibility="gone">
+
+                    </TextView>
+
+                    <Button
+                        android:id="@+id/next_question_button"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_row="9"
+                        android:background="@drawable/button_press_effect_2"
+                        android:text="Next Question"
+                        android:textColor="@android:color/black"
+                        android:textSize="10pt"
+                        android:textStyle="bold" />
+                </GridLayout>
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutForQuizList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:isScrollContainer="true"
+        android:visibility="invisible">
+
+        <ListView
+            android:id="@+id/review_quizList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/finish_this_attempt_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/quiz_card_item" />
+
+        <Button
+            android:id="@+id/finish_this_attempt_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:background="@drawable/button_press_effect"
+            android:text="Finish attempt"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/review_quizList" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

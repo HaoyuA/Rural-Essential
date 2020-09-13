@@ -1,0 +1,58 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="200dp"
+    android:viewportWidth="300"
+    android:viewportHeight="200">
+    <path
+        android:fillColor="#000"
+        android:name="矩形 1"
+        android:pathData="m83 0h133.52l83.48 200h-300.48l83.48 -200z" />
+    <path
+        android:fillColor="#ddd"
+        android:name="矩形 2 拷贝"
+        android:pathData="m214.74 0 81.25 200h4.01l-83.48 -200z" />
+    <path
+        android:fillColor="#ddd"
+        android:name="矩形 2 拷贝 2"
+        android:pathData="m83 0 -83.48 200h4.01l81.25 -200z" />
+    <path
+        android:fillColor="#ddd"
+        android:name="矩形 2 拷贝 3"
+        android:pathData="m147.09 0 -3.34 200h4.01l1.11 -200z" />
+    <path
+        android:fillColor="#ddd"
+        android:name="矩形 2 拷贝 4"
+        android:pathData="m150.65 0 1.11 200h4.01l-3.34 -200z" />
+    <path
+        android:fillColor="#ddd"
+        android:name="矩形 2 拷贝 5"
+        android:pathData="m172.01 0 27.83 200h4.01l-30.05 -200z" />
+    <path
+        android:name="矩形 2 拷贝 5"
+        android:pathData="m172.01 0 27.83 200h4.01l-30.05 -200z"
+        android:fillColor="#000" />
+    <path
+        android:fillColor="#ddd"
+        android:name="矩形 2 拷贝 6"
+        android:pathData="m192.93 0 53.98 200h4.01l-56.21 -200z" />
+    <path
+        android:name="矩形 2 拷贝 6"
+        android:pathData="m192.93 0 53.98 200h4.01l-56.21 -200z"
+        android:fillColor="#000" />
+    <path
+        android:fillColor="#ddd"
+        android:name="矩形 2 拷贝 7"
+        android:pathData="m126.17 0 -29.5 200h4.01l27.27 -200z" />
+    <path
+        android:name="矩形 2 拷贝 7"
+        android:pathData="m126.17 0 -29.5 200h4.01l27.27 -200z"
+        android:fillColor="#000" />
+    <path
+        android:fillColor="#ddd"
+        android:name="矩形 2 拷贝 8"
+        android:pathData="m104.81 0 -56.21 200h4.01l53.98 -200z" />
+    <path
+        android:name="矩形 2 拷贝 8"
+        android:pathData="m104.81 0 -56.21 200h4.01l53.98 -200z"
+        android:fillColor="#000" />
+</vector>

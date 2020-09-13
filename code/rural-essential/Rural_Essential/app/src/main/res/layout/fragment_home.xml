@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/home_screen_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="1"
+        android:rowCount="2"
+        android:visibility="visible">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/weather_and_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginVertical="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:elevation="2dp"
+            android:translationZ="5dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/weather_image"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:contentDescription="@string/description_weather_image"
+                    android:elevation="2dp"
+                    android:translationX="2dp"
+                    android:translationZ="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/service_not_available_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="The service is not enabled"
+                    android:textAlignment="gravity"
+                    android:textColor="@android:color/black"
+                    android:textSize="10pt"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/welcome_text"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="fill_horizontal|center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center_vertical"
+                    android:textAlignment="gravity"
+                    android:textColor="@android:color/black"
+                    android:textSize="8pt"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/weather_image"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weather_and_welcome">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/training_section"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill_vertical"
+                android:elevation="2dp"
+                android:rowCount="4"
+                android:translationZ="5dp">
+
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/map_view"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:focusableInTouchMode="true"
+                    app:layout_constraintBottom_toTopOf="@+id/service_availability"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:context=".MapsFragment" />
+
+                <TextView
+                    android:id="@+id/service_availability"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:background="@android:color/holo_green_dark"
+                    android:gravity="center_vertical"
+                    android:textAlignment="gravity"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/start_training"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <Button
+                    android:id="@+id/start_training"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:background="@drawable/button_press_effect"
+                    android:text="@string/start_button"
+                    android:textAllCaps="false"
+                    android:textSize="8pt"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/warning_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        tools:context=".ui.warning.WarningFragment">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/warning_background_image"
+            android:foreground="@drawable/warning_background_overlay"
+            android:scaleType="centerCrop"
+            android:src="@drawable/black_spur_yvdr_r_1449785_1150x863" />
+
+        <TextView
+            android:id="@+id/training_warning"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/warning_info"
+            android:textAlignment="gravity"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/training_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:visibility="invisible">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="1"
+            android:rowCount="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                app:cardCornerRadius="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/road_name_textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:background="@android:color/darker_gray"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textAlignment="gravity"
+                        android:textColor="@android:color/black"
+                        android:textSize="10pt"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/current_speed_textview"
+                        android:layout_width="170dp"
+                        android:layout_height="100dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="0 km/h"
+                        android:textAlignment="gravity"
+                        android:textColor="@android:color/black"
+                        android:textSize="20pt"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/speed_limitation_sign"
+                        app:layout_constraintTop_toBottomOf="@id/road_name_textView" />
+
+                    <TextView
+                        android:layout_width="170dp"
+                        android:layout_height="70dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Current Speed"
+                        android:textAlignment="gravity"
+                        android:textColor="@android:color/black"
+                        android:textSize="10pt"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/speed_limitation_sign"
+                        app:layout_constraintTop_toBottomOf="@+id/current_speed_textview" />
+
+                    <ImageView
+                        android:id="@+id/speed_limitation_sign"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/speedlimitation_sign"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/current_speed_textview"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/road_name_textView"/>
+
+                    <TextView
+                        android:id="@+id/speed_limitation_textview"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textAlignment="gravity"
+                        android:textColor="@android:color/black"
+                        android:textSize="40pt"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toRightOf="@+id/current_speed_textview"
+
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/road_name_textView" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/road_structure"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_rowWeight="1"
+                        android:layout_column="0"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/ic_residential"
+                        app:layout_constraintBottom_toTopOf="@+id/stop_button"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/road_sign"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/school_zoon"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/road_sign_textview"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textAlignment="gravity"
+                        android:textColor="@android:color/black"
+                        android:textSize="10pt"
+                        android:textStyle="bold"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/stop_button"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/button_press_effect"
+                        android:text="@string/stop_button"
+                        android:textAllCaps="false"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/road_structure" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+    </ScrollView>
+</FrameLayout>
