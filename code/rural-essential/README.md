@@ -2,13 +2,13 @@
 
 这个 app 主要用意是为了通过教育年轻司机的方式去减少交通事故和伤亡 功能主要分为以下几块：
 
-<img src="Rural_Essential/app/src/main/ic_launcher-playstore.png" alt="ic_launcher-playstore" style="zoom:50%; margin: auto" />
+<img src="Rural_Essential/app/src/main/ic_launcher-playstore.png" alt="ic_launcher-playstore" style="zoom:50%; width:300px;height:300px;" />
 
 ### 首页
 
 - 首页天气提醒 用户可以看到当前天气并会有建议是否适合驾驶出行
 
-![picture1](Rural_Essential/app/src/main/res/drawable/picture1.png)
+![picture1](Rural_Essential/app/src/main/res/drawable/picture1.png )
 
 - 当用户点击 start 后 会进入驾驶页面 屏幕会显示其当前速度和道路限速 如有学校区域也会显示 若超速 则会有语音提示
 
